@@ -313,7 +313,7 @@ nav ul li a:hover::after {
             rgba(10, 22, 40, 0.18) 100%
         ),
 
-        url("./img/Banner.jpeg");
+        url("Banner.jpeg");
 
     background-size: cover;
 
