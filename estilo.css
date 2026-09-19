@@ -1248,3 +1248,188 @@ ul {
     font-size: .78rem;
   }
 }
+/* =========================================================
+   MENU MOBILE - GRUPO TARSO
+   ========================================================= */
+
+.menu-mobile {
+  display: none;
+  width: 28px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.menu-mobile span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--azul-escuro);
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .header-content {
+    gap: 18px;
+  }
+
+  .nav-menu {
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  /* Cabeçalho */
+  .header-content {
+    min-height: 70px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+
+  /* Logo */
+  .logo {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo img {
+    display: block;
+    width: 130px;
+    height: auto;
+    max-width: 130px;
+    max-height: 45px;
+    object-fit: contain;
+  }
+
+  /* Esconde botão desktop */
+  .btn-header {
+    display: none;
+  }
+
+  /* Botão das três linhas */
+  .menu-mobile {
+    display: flex;
+  }
+
+  /* Menu fechado */
+  .header nav.menu-principal {
+    display: none;
+  }
+
+  /* Menu aberto */
+  .header.menu-aberto nav.menu-principal {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--branco);
+    border-top: 1px solid var(--cinza-200);
+    border-bottom: 1px solid var(--cinza-200);
+    box-shadow: 0 10px 25px rgba(10,22,40,.10);
+    z-index: 999;
+  }
+
+  .header.menu-aberto .nav-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 20px 12px;
+  }
+
+  .header.menu-aberto .nav-menu li {
+    width: 100%;
+  }
+
+  .header.menu-aberto .nav-menu a {
+    display: block;
+    width: 100%;
+    padding: 14px 5px;
+    font-size: .9rem;
+    border-bottom: 1px solid var(--cinza-100);
+  }
+
+  .header.menu-aberto .nav-menu li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Retira a linha azul do desktop */
+  .header.menu-aberto .nav-menu a::after {
+    display: none;
+  }
+
+  /* Animação das três linhas */
+  .header.menu-aberto .menu-mobile span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+  }
+
+  .header.menu-aberto .menu-mobile span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header.menu-aberto .menu-mobile span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .header-content {
+    min-height: 68px;
+    padding: 9px 0;
+  }
+
+  .logo img {
+    width: 125px;
+    max-width: 125px;
+    max-height: 42px;
+  }
+
+  .menu-mobile {
+    width: 26px;
+    height: 23px;
+  }
+
+  .menu-mobile span {
+    width: 26px;
+    height: 3px;
+  }
+
+  .header.menu-aberto nav.menu-principal {
+    top: 68px;
+  }
+
+}
