@@ -1,5 +1,3 @@
-
-
 /* =========================================================
    1. VARIÁVEIS
    ========================================================= */
@@ -288,6 +286,7 @@ nav ul li a:hover::after {
         0 8px 22px rgba(10, 22, 40, 0.20);
 }
 
+
 /* =========================================================
    8. BANNER PRINCIPAL
    ========================================================= */
@@ -319,8 +318,6 @@ nav ul li a:hover::after {
 
     background-position: center;
 }
-
-
 
 .banner:hover::before {
     left: 150%;
@@ -359,17 +356,17 @@ nav ul li a:hover::after {
    ========================================================= */
 
 .banner-conteudo {
-   position: absolute;
-   left: 5%;
-   top: 50%;
-   transform: translateY(-50%);
-   width: 600px;
-   max-width: 600px;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   justify-content: center;
-   text-align: left;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
 }
 
 .banner-marca {
@@ -389,12 +386,12 @@ nav ul li a:hover::after {
 }
 
 .banner-conteudo h1 {
-   max-width: 700px;
-   margin: 0 0 22px 0;
-   color: var(--branco);
-   font-size: clamp(40px, 5vw, 64px);
-   line-height: 1.05;
-   font-weight: 800;
+    max-width: 700px;
+    margin: 0 0 22px 0;
+    color: var(--branco);
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 800;
 }
 
 .banner-conteudo p {
@@ -578,7 +575,7 @@ nav ul li a:hover::after {
 
     margin: 0 auto;
 
-    text-align:left ;
+    text-align: left;
 }
 
 .apresentacao-conteudo h2 {
@@ -592,7 +589,6 @@ nav ul li a:hover::after {
 }
 
 .apresentacao-conteudo p {
-  
     max-width: 800px;
 
     margin: 0 auto 10px;
@@ -816,10 +812,18 @@ nav ul li a:hover::after {
     grid-template-columns: repeat(4, 1fr);
 
     gap: 18px;
+
+    width: 100%;
+
+    max-width: 100%;
 }
 
 .cliente-logo {
     min-height: 120px;
+
+    min-width: 0;
+
+    width: 100%;
 
     display: flex;
 
@@ -836,6 +840,8 @@ nav ul li a:hover::after {
     border-radius: 6px;
 
     transition: var(--transicao);
+
+    overflow: hidden;
 }
 
 .cliente-logo:hover {
@@ -847,6 +853,8 @@ nav ul li a:hover::after {
 }
 
 .cliente-logo img {
+    display: block;
+
     max-width: 150px;
 
     max-height: 55px;
@@ -983,6 +991,10 @@ nav ul li a:hover::after {
     margin-top: 30px;
 }
 
+
+/* =========================================================
+   BANNER DE SERVIÇOS
+   ========================================================= */
 
 .servicos-banner {
     min-height: 620px;
@@ -1194,6 +1206,7 @@ nav ul li a:hover::after {
     line-height: 1.7;
 }
 
+
 /* =========================================================
    23. RODAPÉ
    ========================================================= */
@@ -1230,10 +1243,9 @@ footer {
     color: #94A0B2;
 
     font-size: 14px;
-    
 }
-.logo-imagem{
-    
+
+.logo-imagem {
     display: flex;
 
     align-items: center;
@@ -1244,7 +1256,6 @@ footer {
 
     transition: var(--transicao);
 }
-
 
 
 /* COLUNAS */
@@ -1311,6 +1322,8 @@ footer {
 .footer-bottom a:hover {
     color: var(--laranja);
 }
+
+
 /* =========================================================
    RESPONSIVIDADE
    Grupo Tarso
@@ -1367,6 +1380,7 @@ footer {
     .container {
         width: 100%;
         max-width: 100%;
+
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -1378,7 +1392,9 @@ footer {
 
     header {
         position: sticky;
+
         top: 0;
+
         z-index: 1000;
     }
 
@@ -1388,7 +1404,9 @@ footer {
         padding: 8px 20px;
 
         display: flex;
+
         align-items: center;
+
         justify-content: space-between;
 
         gap: 0;
@@ -1403,6 +1421,7 @@ footer {
         width: auto;
 
         display: flex;
+
         align-items: center;
 
         flex-shrink: 0;
@@ -1414,9 +1433,11 @@ footer {
         display: block;
 
         width: 130px;
+
         height: auto;
 
         max-width: 130px;
+
         max-height: 45px;
 
         object-fit: contain;
@@ -1443,12 +1464,15 @@ footer {
 
     .menu-mobile {
         width: 26px;
+
         height: 22px;
 
         padding: 0;
+
         margin: 0;
 
         border: 0;
+
         outline: none;
 
         background: transparent;
@@ -1456,6 +1480,7 @@ footer {
         display: flex;
 
         flex-direction: column;
+
         justify-content: space-between;
 
         flex-shrink: 0;
@@ -1467,6 +1492,7 @@ footer {
         display: block;
 
         width: 26px;
+
         height: 2px;
 
         background: var(--azul-escuro);
@@ -1485,9 +1511,12 @@ footer {
         position: absolute;
 
         top: 72px;
+
         left: 0;
 
         width: 100%;
+
+        max-width: 100%;
 
         background: var(--branco);
 
@@ -1495,6 +1524,8 @@ footer {
 
         box-shadow:
             0 8px 20px rgba(10, 22, 40, 0.12);
+
+        overflow: hidden;
     }
 
     header.menu-aberto .menu-principal ul {
@@ -1507,10 +1538,14 @@ footer {
         gap: 0;
 
         width: 100%;
+
+        max-width: 100%;
     }
 
     header.menu-aberto .menu-principal li {
         width: 100%;
+
+        max-width: 100%;
     }
 
     header.menu-aberto .menu-principal li a {
@@ -1556,9 +1591,12 @@ footer {
     .banner {
         width: 100%;
 
+        max-width: 100%;
+
         min-height: 620px;
 
         background-position: center;
+
         background-size: cover;
     }
 
@@ -1566,11 +1604,13 @@ footer {
         position: relative;
 
         left: auto;
+
         top: auto;
 
         transform: none;
 
         width: 100%;
+
         max-width: 100%;
 
         padding: 70px 0 80px;
@@ -1596,6 +1636,7 @@ footer {
 
     .banner-conteudo h1 {
         width: 100%;
+
         max-width: 100%;
 
         margin-bottom: 20px;
@@ -1605,10 +1646,13 @@ footer {
         line-height: 1.05;
 
         overflow-wrap: break-word;
+
+        word-break: normal;
     }
 
     .banner-conteudo p {
         width: 100%;
+
         max-width: 100%;
 
         margin-bottom: 25px;
@@ -1637,6 +1681,7 @@ footer {
 
     .banner-botoes a {
         width: 100%;
+
         max-width: 100%;
 
         min-height: 50px;
@@ -1653,16 +1698,19 @@ footer {
 
     .apresentacao-conteudo {
         width: 100%;
+
         max-width: 100%;
     }
 
     .apresentacao-conteudo h2 {
         font-size: 26px;
+
         line-height: 1.2;
     }
 
     .apresentacao-conteudo p {
         font-size: 15px;
+
         line-height: 1.7;
     }
 
@@ -1679,6 +1727,18 @@ footer {
         grid-template-columns: 1fr;
 
         gap: 20px;
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .pilar-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
     }
 
     .pilar-imagem {
@@ -1695,31 +1755,76 @@ footer {
 
 
     /* =====================================================
-       CLIENTES
+       CLIENTES E PARCERIAS
        ===================================================== */
 
     .clientes {
         padding: 60px 0;
-    }
 
-    .clientes-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
 
-        gap: 12px;
-    }
-
-    .cliente-logo {
-        min-height: 110px;
-
-        padding: 15px;
+        max-width: 100%;
 
         overflow: hidden;
     }
 
-    .cliente-logo img {
-        width: auto;
+    .clientes .container {
+        width: 100%;
 
         max-width: 100%;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+    .clientes-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+    .cliente-logo {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        min-height: 110px;
+
+        padding: 15px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+    .cliente-logo img {
+        display: block;
+
+        width: auto;
+
+        height: auto;
+
+        max-width: 100%;
+
         max-height: 55px;
 
         object-fit: contain;
@@ -1736,6 +1841,7 @@ footer {
 
     .cta-conteudo {
         width: 100%;
+
         max-width: 100%;
     }
 
@@ -1769,14 +1875,18 @@ footer {
     .servicos-banner {
         width: 100%;
 
+        max-width: 100%;
+
         min-height: 520px;
 
         background-position: center;
+
         background-size: cover;
     }
 
     .servicos-banner-conteudo {
         width: 100%;
+
         max-width: 100%;
 
         padding: 60px 0;
@@ -1784,6 +1894,7 @@ footer {
 
     .servicos-banner-conteudo h1 {
         width: 100%;
+
         max-width: 100%;
 
         font-size: clamp(34px, 10vw, 48px);
@@ -1801,9 +1912,19 @@ footer {
         grid-template-columns: 1fr;
 
         gap: 20px;
+
+        width: 100%;
+
+        max-width: 100%;
     }
 
     .servico-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
         padding: 25px 20px;
     }
 
@@ -1820,6 +1941,10 @@ footer {
         grid-template-columns: 1fr;
 
         gap: 25px;
+
+        width: 100%;
+
+        max-width: 100%;
     }
 
     .servicos-diferenciais-texto h2 {
@@ -1837,6 +1962,7 @@ footer {
         gap: 35px;
 
         padding-top: 50px;
+
         padding-bottom: 45px;
     }
 
@@ -1844,6 +1970,7 @@ footer {
         min-height: auto;
 
         padding-top: 20px;
+
         padding-bottom: 20px;
 
         flex-direction: column;
@@ -1860,7 +1987,12 @@ footer {
 @media (max-width: 480px) {
 
     .container {
+        width: 100%;
+
+        max-width: 100%;
+
         padding-left: 16px;
+
         padding-right: 16px;
     }
 
@@ -1871,6 +2003,7 @@ footer {
         min-height: 70px;
 
         padding-left: 18px;
+
         padding-right: 18px;
     }
 
@@ -1905,6 +2038,7 @@ footer {
 
     .banner-conteudo {
         padding-top: 60px;
+
         padding-bottom: 70px;
     }
 
@@ -1934,11 +2068,66 @@ footer {
     }
 
 
-    /* ---------- CARDS ---------- */
+    /* ---------- CLIENTES ---------- */
+
+    .clientes {
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+    .clientes .container {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
 
     .clientes-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        gap: 10px;
     }
+
+    .cliente-logo {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        min-height: 100px;
+
+        padding: 12px;
+
+        overflow: hidden;
+    }
+
+    .cliente-logo img {
+        width: auto;
+
+        height: auto;
+
+        max-width: 100%;
+
+        max-height: 55px;
+
+        object-fit: contain;
+    }
+
+
+    /* ---------- CARDS ---------- */
 
     .pilar-imagem {
         height: 200px;
