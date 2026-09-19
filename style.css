@@ -132,15 +132,20 @@ header {
 header .container {
     min-height: 78px;
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
 
-    justify-content: space-between;
+    gap: 20px;
+}
+header .logo {
+    justify-self: start;
+}
 
-    gap: 35px;
-
-    position: relative;
+header .botao-header {
+    justify-self: end;
 }
 
 
@@ -184,9 +189,6 @@ header .container {
    ========================================================= */
 
 .menu-principal {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     margin-left: 0;
 }
 
