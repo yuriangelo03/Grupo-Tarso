@@ -1312,415 +1312,69 @@ footer {
     color: var(--laranja);
 }
 /* =========================================================
-   RESPONSIVO REAL - CELULAR
+   RESPONSIVIDADE
    Grupo Tarso
    ========================================================= */
 
 
+/* =========================================================
+   TABLET
+   ========================================================= */
 
-    /* ---------- CABEÇALHO ---------- */
+@media (max-width: 1100px) {
 
-    header {
-        width: 100%;
+    .container {
+        padding-left: 22px;
+        padding-right: 22px;
     }
 
     header .container {
-        min-height: 70px;
-        padding: 10px 20px;
-        gap: 0;
-    }
-
-    .logo {
-        flex-shrink: 0;
-    }
-
-    .logo img {
-        width: 130px;
-        max-height: 38px;
-    }
-
-    /*
-       No celular o menu horizontal não deve
-       ocupar toda a tela.
-    */
-
-    .menu-principal {
-        margin-left: auto;
-        max-width: 100%;
-    }
-
-    nav ul {
-        gap: 0;
+        gap: 20px;
     }
 
     nav ul li a {
-        padding: 12px 8px;
-        font-size: 11px;
-    }
-
-    .botao-header {
-        display: none;
-    }
-
-
-    /* ---------- BANNER ---------- */
-
-    .banner {
-        width: 100%;
-        min-height: 620px;
-        height: auto;
-
-        background-position: center;
-        background-size: cover;
-    }
-
-    .banner-conteudo {
-        position: relative;
-
-        left: auto;
-        top: auto;
-        transform: none;
-
-        width: 100%;
-        max-width: 100%;
-
-        padding: 70px 20px 80px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-
-        text-align: left;
-    }
-
-
-    /* ---------- MARCA ---------- */
-
-    .banner-marca {
-        margin-bottom: 15px;
-        font-size: 13px;
-        letter-spacing: 1.5px;
-    }
-
-
-    /* ---------- TÍTULO ---------- */
-
-    .banner-conteudo h1 {
-        width: 100%;
-        max-width: 100%;
-
-        margin-bottom: 20px;
-
-        font-size: clamp(34px, 10vw, 48px);
-        line-height: 1.05;
-
-        word-break: normal;
-        overflow-wrap: break-word;
-    }
-
-
-    /* ---------- TEXTO ---------- */
-
-    .banner-conteudo p {
-        width: 100%;
-        max-width: 100%;
-
-        margin-bottom: 25px;
-
-        font-size: 16px;
-        line-height: 1.5;
-
-        overflow-wrap: break-word;
-    }
-
-
-    /* ---------- BOTÕES ---------- */
-
-    .banner-botoes {
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 12px;
-    }
-
-    .botao-principal,
-    .botao-whatsapp,
-    .botao-secundario {
-        width: 100%;
-        max-width: 100%;
-
-        min-height: 50px;
-
-        padding: 14px 18px;
-
-        font-size: 14px;
-
-        text-align: center;
-    }
-
-
-    /* ---------- APRESENTAÇÃO ---------- */
-
-    .apresentacao {
-        padding: 60px 0;
-    }
-
-    .apresentacao-conteudo {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .apresentacao-conteudo h2 {
-        font-size: 26px;
-        line-height: 1.2;
-    }
-
-    .apresentacao-conteudo p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-
-    /* ---------- PILARES ---------- */
-
-    .pilares {
-        padding: 60px 0;
-    }
-
-    .pilares-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .pilar-imagem {
-        height: 220px;
-    }
-
-    .pilar-conteudo {
-        padding: 24px;
-    }
-
-    .pilar-conteudo h3 {
-        font-size: 21px;
-    }
-
-
-    /* ---------- CLIENTES ---------- */
-
-    .clientes {
-        padding: 60px 0;
-    }
-
-    .clientes-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .cliente-logo {
-        min-height: 100px;
-        padding: 15px;
-    }
-
-
-    /* ---------- CTA ---------- */
-
-    .cta {
-        padding: 60px 0;
-    }
-
-    .cta-conteudo {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .cta-conteudo h2 {
-        font-size: 32px;
-    }
-
-    .cta-conteudo p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    .cta-botoes {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .cta-botoes a {
-        width: 100%;
-    }
-
-
-    /* ---------- BANNER DE SERVIÇOS ---------- */
-
-    .servicos-banner {
-        width: 100%;
-        min-height: 520px;
-
-        background-position: center;
-    }
-
-    .servicos-banner-conteudo {
-        width: 100%;
-        max-width: 100%;
-
-        padding: 60px 0;
-    }
-
-    .servicos-banner-conteudo h1 {
-        width: 100%;
-        max-width: 100%;
-
-        font-size: clamp(34px, 10vw, 48px);
-        line-height: 1.05;
-
-        overflow-wrap: break-word;
-    }
-
-    .servicos-area {
-        padding: 60px 0;
-    }
-
-    .servicos-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .servico-card {
-        padding: 25px 20px;
-    }
-
-
-    /* ---------- DIFERENCIAIS ---------- */
-
-    .servicos-diferenciais {
-        padding: 60px 0;
-    }
-
-    .servicos-diferenciais-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .servicos-diferenciais-texto h2 {
-        font-size: 30px;
-    }
-
-
-    /* ---------- RODAPÉ ---------- */
-
-    .footer-conteudo {
-        grid-template-columns: 1fr;
-        gap: 35px;
-
-        padding-top: 50px;
-        padding-bottom: 45px;
-    }
-
-    .footer-bottom .container {
-        min-height: auto;
-
-        padding-top: 20px;
-        padding-bottom: 20px;
-
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-singnature {
-        flex-wrap: wrap;
-        padding: 20px;
-        line-height: 1.5;
-    }
-}
-
-
-/* =========================================================
-   CELULARES PEQUENOS
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .container {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    /* Cabeçalho */
-
-    header .container {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .logo img {
-        width: 125px;
-    }
-
-
-    /* Banner */
-
-    .banner {
-        min-height: 600px;
-    }
-
-    .banner-conteudo {
-        padding: 60px 16px 70px;
-    }
-
-    .banner-marca {
+        padding-left: 10px;
+        padding-right: 10px;
         font-size: 12px;
     }
 
-    .banner-conteudo h1 {
-        font-size: 36px;
-        line-height: 1.05;
+    .botao-header {
+        padding: 12px 16px;
     }
 
-    .banner-conteudo p {
-        font-size: 15px;
+    .pilares-grid {
+        gap: 20px;
     }
-
-
-    /* Botões */
-
-    .botao-principal,
-    .botao-whatsapp,
-    .botao-secundario {
-        min-height: 48px;
-        font-size: 13px;
-    }
-
-
-    /* Cards */
 
     .clientes-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .pilar-imagem {
-        height: 200px;
+    .footer-conteudo {
+        gap: 30px;
     }
 }
+
+
 /* =========================================================
-   MENU MOBILE - GRUPO TARSO
+   CELULAR
    ========================================================= */
-
-/* Botão mobile escondido no computador */
-.menu-mobile {
-    display: none;
-}
-
 
 @media (max-width: 768px) {
 
-    /* CABEÇALHO */
+    /* ---------- CONTAINER ---------- */
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* =====================================================
+       CABEÇALHO
+       ===================================================== */
 
     header {
         position: sticky;
@@ -1730,41 +1384,53 @@ footer {
 
     header .container {
         min-height: 72px;
+
         padding: 8px 20px;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
 
+        gap: 0;
+
         position: relative;
     }
 
 
-    /* LOGO */
+    /* ---------- LOGO DO CABEÇALHO ---------- */
 
     header .logo {
         width: auto;
+
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+
+        flex-shrink: 0;
+
         margin: 0;
     }
 
     header .logo img {
+        display: block;
+
         width: 130px;
         height: auto;
+
+        max-width: 130px;
         max-height: 45px;
+
+        object-fit: contain;
     }
 
 
-    /* ESCONDE MENU DESKTOP */
+    /* ---------- ESCONDE MENU DESKTOP ---------- */
 
     header .menu-principal {
         display: none;
     }
 
 
-    /* ESCONDE BOTÃO DESKTOP */
+    /* ---------- ESCONDE BOTÃO DESKTOP ---------- */
 
     header .botao-header {
         display: none;
@@ -1772,22 +1438,27 @@ footer {
 
 
     /* =====================================================
-       BOTÃO DAS 3 BARRAS
+       3 BARRAS
        ===================================================== */
 
     .menu-mobile {
         width: 26px;
-        height: 24px;
+        height: 22px;
 
         padding: 0;
         margin: 0;
 
         border: 0;
+        outline: none;
+
         background: transparent;
 
         display: flex;
+
         flex-direction: column;
         justify-content: space-between;
+
+        flex-shrink: 0;
 
         cursor: pointer;
     }
@@ -1851,9 +1522,9 @@ footer {
 
         font-size: 14px;
 
-        border-bottom: 1px solid var(--borda);
-
         text-align: left;
+
+        border-bottom: 1px solid var(--borda);
     }
 
     header.menu-aberto .menu-principal li a::after {
@@ -1862,11 +1533,11 @@ footer {
 
 
     /* =====================================================
-       ANIMAÇÃO DAS 3 BARRAS
+       ANIMAÇÃO DO BOTÃO
        ===================================================== */
 
     header.menu-aberto .menu-mobile span:nth-child(1) {
-        transform: translateY(11px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
 
     header.menu-aberto .menu-mobile span:nth-child(2) {
@@ -1874,31 +1545,402 @@ footer {
     }
 
     header.menu-aberto .menu-mobile span:nth-child(3) {
-        transform: translateY(-11px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+
+    /* =====================================================
+       BANNER
+       ===================================================== */
+
+    .banner {
+        width: 100%;
+
+        min-height: 620px;
+
+        background-position: center;
+        background-size: cover;
+    }
+
+    .banner-conteudo {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 0 80px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        text-align: left;
+    }
+
+    .banner-marca {
+        margin-bottom: 15px;
+
+        font-size: 13px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .banner-conteudo h1 {
+        width: 100%;
+        max-width: 100%;
+
+        margin-bottom: 20px;
+
+        font-size: clamp(34px, 10vw, 48px);
+
+        line-height: 1.05;
+
+        overflow-wrap: break-word;
+    }
+
+    .banner-conteudo p {
+        width: 100%;
+        max-width: 100%;
+
+        margin-bottom: 25px;
+
+        font-size: 16px;
+
+        line-height: 1.5;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* ---------- BOTÕES DO BANNER ---------- */
+
+    .banner-botoes {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .banner-botoes a {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: 50px;
+    }
+
+
+    /* =====================================================
+       APRESENTAÇÃO
+       ===================================================== */
+
+    .apresentacao {
+        padding: 60px 0;
+    }
+
+    .apresentacao-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .apresentacao-conteudo h2 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .apresentacao-conteudo p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       PILARES
+       ===================================================== */
+
+    .pilares {
+        padding: 60px 0;
+    }
+
+    .pilares-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .pilar-imagem {
+        height: 220px;
+    }
+
+    .pilar-conteudo {
+        padding: 24px;
+    }
+
+    .pilar-conteudo h3 {
+        font-size: 21px;
+    }
+
+
+    /* =====================================================
+       CLIENTES
+       ===================================================== */
+
+    .clientes {
+        padding: 60px 0;
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .cliente-logo {
+        min-height: 110px;
+
+        padding: 15px;
+
+        overflow: hidden;
+    }
+
+    .cliente-logo img {
+        width: auto;
+
+        max-width: 100%;
+        max-height: 55px;
+
+        object-fit: contain;
+    }
+
+
+    /* =====================================================
+       CTA
+       ===================================================== */
+
+    .cta {
+        padding: 60px 0;
+    }
+
+    .cta-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-conteudo h2 {
+        font-size: 32px;
+    }
+
+    .cta-conteudo p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .cta-botoes {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .cta-botoes a {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       BANNER DE SERVIÇOS
+       ===================================================== */
+
+    .servicos-banner {
+        width: 100%;
+
+        min-height: 520px;
+
+        background-position: center;
+        background-size: cover;
+    }
+
+    .servicos-banner-conteudo {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 60px 0;
+    }
+
+    .servicos-banner-conteudo h1 {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(34px, 10vw, 48px);
+
+        line-height: 1.05;
+
+        overflow-wrap: break-word;
+    }
+
+    .servicos-area {
+        padding: 60px 0;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .servico-card {
+        padding: 25px 20px;
+    }
+
+
+    /* =====================================================
+       DIFERENCIAIS
+       ===================================================== */
+
+    .servicos-diferenciais {
+        padding: 60px 0;
+    }
+
+    .servicos-diferenciais-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .servicos-diferenciais-texto h2 {
+        font-size: 30px;
+    }
+
+
+    /* =====================================================
+       RODAPÉ
+       ===================================================== */
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-top: 50px;
+        padding-bottom: 45px;
+    }
+
+    .footer-bottom .container {
+        min-height: auto;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        flex-direction: column;
+
+        text-align: center;
     }
 }
 
 
-/* CELULARES PEQUENOS */
+/* =========================================================
+   CELULAR PEQUENO
+   ========================================================= */
 
 @media (max-width: 480px) {
 
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    /* ---------- CABEÇALHO ---------- */
+
     header .container {
         min-height: 70px;
+
         padding-left: 18px;
         padding-right: 18px;
     }
 
     header .logo img {
         width: 125px;
+
+        max-width: 125px;
+
+        max-height: 42px;
     }
 
-    .menu-mobile,
+    .menu-mobile {
+        width: 25px;
+
+        height: 21px;
+    }
+
     .menu-mobile span {
         width: 25px;
     }
 
     header.menu-aberto .menu-principal {
         top: 70px;
+    }
+
+
+    /* ---------- BANNER ---------- */
+
+    .banner {
+        min-height: 600px;
+    }
+
+    .banner-conteudo {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    .banner-marca {
+        font-size: 12px;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 36px;
+
+        line-height: 1.05;
+    }
+
+    .banner-conteudo p {
+        font-size: 15px;
+    }
+
+
+    /* ---------- BOTÕES ---------- */
+
+    .botao-principal,
+    .botao-whatsapp,
+    .botao-secundario {
+        min-height: 48px;
+
+        font-size: 13px;
+    }
+
+
+    /* ---------- CARDS ---------- */
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pilar-imagem {
+        height: 200px;
     }
 }
