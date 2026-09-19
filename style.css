@@ -1316,23 +1316,64 @@ footer {
    Grupo Tarso
    ========================================================= */
 
+/* =========================================================
+   MENU MOBILE - 3 BARRAS
+   ========================================================= */
+
 @media (max-width: 768px) {
 
-    /* ---------- GERAL ---------- */
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+    header .container {
+        min-height: 72px;
+        padding: 10px 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+    .logo {
+        width: auto;
+        justify-content: flex-start;
     }
+
+    .logo img {
+        width: 130px;
+        max-height: 40px;
+    }
+
+    /* Esconde o menu normal no celular */
+    .menu-principal {
+        width: 28px;
+        height: 22px;
+        margin-left: auto;
+        position: relative;
+    }
+
+    .menu-principal nav {
+        display: none;
+    }
+
+    /* Cria as 3 barras */
+    .menu-principal::before {
+        content: "";
+        position: absolute;
+
+        top: 0;
+        right: 0;
+
+        width: 25px;
+        height: 2px;
+
+        background: var(--azul-escuro);
+
+        box-shadow:
+            0 8px 0 var(--azul-escuro),
+            0 16px 0 var(--azul-escuro);
+    }
+
+    .botao-header {
+        display: none;
+    }
+}
 
 
     /* ---------- CABEÇALHO ---------- */
