@@ -139,6 +139,8 @@ header .container {
     justify-content: space-between;
 
     gap: 35px;
+
+    position: relative;
 }
 
 
@@ -182,7 +184,10 @@ header .container {
    ========================================================= */
 
 .menu-principal {
-    margin-left: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
 }
 
 nav ul {
