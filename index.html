@@ -356,6 +356,25 @@
           </div>
         </div>
       </footer>
+      <script>
+  const menuBotao = document.querySelector(".menu-mobile");
+  const header = document.querySelector("header");
+
+  menuBotao.addEventListener("click", () => {
+    const aberto = header.classList.toggle("menu-aberto");
+
+    menuBotao.setAttribute("aria-expanded", aberto);
+  });
+
+  const linksMenu = document.querySelectorAll(".menu-principal a");
+
+  linksMenu.forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("menu-aberto");
+      menuBotao.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
     </main>
   </body>
 </html>
