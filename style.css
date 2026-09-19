@@ -1312,446 +1312,416 @@ footer {
     color: var(--laranja);
 }
 /* =========================================================
-   RESPONSIVO
-================================ */
+   RESPONSIVO REAL - CELULAR
+   Grupo Tarso
+   ========================================================= */
+
 @media (max-width: 768px) {
-    .rodape {
-        padding-top: 30px;
+
+    /* ---------- GERAL ---------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
-    .rodape-container {
-        padding: 0 20px;
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .rodape-social {
-        padding-left: 18px;
+
+    /* ---------- CABEÇALHO ---------- */
+
+    header {
+        width: 100%;
     }
 
-    .assinatura {
-        flex-wrap: wrap;
+    header .container {
+        min-height: 70px;
+        padding: 10px 20px;
+        gap: 0;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .logo img {
+        width: 130px;
+        max-height: 38px;
+    }
+
+    /*
+       No celular o menu horizontal não deve
+       ocupar toda a tela.
+    */
+
+    .menu-principal {
+        margin-left: auto;
+        max-width: 100%;
+    }
+
+    nav ul {
+        gap: 0;
+    }
+
+    nav ul li a {
+        padding: 12px 8px;
+        font-size: 11px;
+    }
+
+    .botao-header {
+        display: none;
+    }
+
+
+    /* ---------- BANNER ---------- */
+
+    .banner {
+        width: 100%;
+        min-height: 620px;
+        height: auto;
+
+        background-position: center;
+        background-size: cover;
+    }
+
+    .banner-conteudo {
+        position: relative;
+
+        left: auto;
+        top: auto;
+        transform: none;
+
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 20px 80px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        text-align: left;
+    }
+
+
+    /* ---------- MARCA ---------- */
+
+    .banner-marca {
+        margin-bottom: 15px;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* ---------- TÍTULO ---------- */
+
+    .banner-conteudo h1 {
+        width: 100%;
+        max-width: 100%;
+
+        margin-bottom: 20px;
+
+        font-size: clamp(34px, 10vw, 48px);
+        line-height: 1.05;
+
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+
+    /* ---------- TEXTO ---------- */
+
+    .banner-conteudo p {
+        width: 100%;
+        max-width: 100%;
+
+        margin-bottom: 25px;
+
+        font-size: 16px;
+        line-height: 1.5;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* ---------- BOTÕES ---------- */
+
+    .banner-botoes {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .botao-principal,
+    .botao-whatsapp,
+    .botao-secundario {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: 50px;
+
+        padding: 14px 18px;
+
         font-size: 14px;
+
+        text-align: center;
     }
 
-    .rodape-final {
-        padding: 18px 20px;
+
+    /* ---------- APRESENTAÇÃO ---------- */
+
+    .apresentacao {
+        padding: 60px 0;
+    }
+
+    .apresentacao-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .apresentacao-conteudo h2 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .apresentacao-conteudo p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- PILARES ---------- */
+
+    .pilares {
+        padding: 60px 0;
+    }
+
+    .pilares-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pilar-imagem {
+        height: 220px;
+    }
+
+    .pilar-conteudo {
+        padding: 24px;
+    }
+
+    .pilar-conteudo h3 {
+        font-size: 21px;
+    }
+
+
+    /* ---------- CLIENTES ---------- */
+
+    .clientes {
+        padding: 60px 0;
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .cliente-logo {
+        min-height: 100px;
+        padding: 15px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta {
+        padding: 60px 0;
+    }
+
+    .cta-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-conteudo h2 {
+        font-size: 32px;
+    }
+
+    .cta-conteudo p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .cta-botoes {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-botoes a {
+        width: 100%;
+    }
+
+
+    /* ---------- BANNER DE SERVIÇOS ---------- */
+
+    .servicos-banner {
+        width: 100%;
+        min-height: 520px;
+
+        background-position: center;
+    }
+
+    .servicos-banner-conteudo {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 60px 0;
+    }
+
+    .servicos-banner-conteudo h1 {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(34px, 10vw, 48px);
+        line-height: 1.05;
+
+        overflow-wrap: break-word;
+    }
+
+    .servicos-area {
+        padding: 60px 0;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servico-card {
+        padding: 25px 20px;
+    }
+
+
+    /* ---------- DIFERENCIAIS ---------- */
+
+    .servicos-diferenciais {
+        padding: 60px 0;
+    }
+
+    .servicos-diferenciais-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .servicos-diferenciais-texto h2 {
+        font-size: 30px;
+    }
+
+
+    /* ---------- RODAPÉ ---------- */
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+
+        padding-top: 50px;
+        padding-bottom: 45px;
+    }
+
+    .footer-bottom .container {
+        min-height: auto;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-singnature {
+        flex-wrap: wrap;
+        padding: 20px;
+        line-height: 1.5;
     }
 }
-/* TABLET */
-@media (max-width:1100px) {
-  .nav-menu {
-    gap: 18px;
-  }
-  .header-content {
-    gap: 18px;
-  }
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-  .hero-content {
-    max-width: 850px;
-  }
-  .hero-image {
-    max-width: 750px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .services-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .audience-grid {
-    grid-template-columns: repeat(3,1fr);
-  }
-  .process-grid {
-    grid-template-columns: repeat(3,1fr);
-  }
-  .completed-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .clients-grid {
-    grid-template-columns: repeat(3,1fr);
-  }
-  .cta-content {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-/* CELULAR */
-@media (max-width:800px) {
-  .container {
-    width: min(100% - 28px,var(--largura));
-  }
-  .section {
-    padding: 65px 0;
-  }
-  .header-content {
-    min-height: 70px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 12px 0;
-  }
-  .logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .nav-menu {
-    width: 100%;
-    gap: 16px;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 4px 2px 8px;
-    scrollbar-width: none;
-  }
-  .nav-menu::-webkit-scrollbar {
-    display: none;
-  }
-  .nav-menu a {
-    white-space: nowrap;
-    font-size: .8rem;
-  }
-  .btn-header {
-    display: none;
-  }
-  .services-hero {
-    padding: 60px 0 55px;
-  }
-  .hero-content h1 {
-    font-size: clamp(2.25rem,11vw,3.4rem);
-  }
-  .hero-content > p {
-    font-size: .98rem;
-  }
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .hero-buttons .btn {
-    width: 100%;
-  }
-  .hero-stats {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .hero-image, .hero-image img {
-    min-height: 320px;
-    height: 320px;
-  }
-  .benefits-grid, .who-grid {
-    grid-template-columns: 1fr;
-  }
-  .benefits-grid {
-    gap: 16px;
-  }
-  .who-grid {
-    gap: 35px;
-  }
-  .who-card {
-    padding: 30px 24px;
-  }
-  .who-card ul {
-    grid-template-columns: 1fr;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .service-card > p {
-    min-height: auto;
-  }
-  .audience-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-  .completed-grid {
-    grid-template-columns: 1fr;
-  }
-  .completed-card, .completed-card img {
-    min-height: 320px;
-    height: 320px;
-  }
-  .clients-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .cta {
-    padding: 55px 0;
-  }
-  .cta-buttons {
-    width: 100%;
-    flex-direction: column;
-  }
-  .cta-buttons .btn {
-    width: 100%;
-  }
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-  .footer-signature {
-    flex-wrap: wrap;
-  }
-  .whatsApp-float {
-    right: 16px;
-    bottom: 16px;
-  }
-}
-/* CELULAR PEQUENO */
-@media (max-width:480px) {
-  .section-heading {
-    margin-bottom: 38px;
-  }
-  .section-heading h2 {
-    font-size: 1.85rem;
-  }
-  .hero-stats {
-    gap: 8px;
-  }
-  .stat {
-    padding: 13px 9px;
-  }
-  .stat strong {
-    font-size: 1rem;
-  }
-  .stat span {
-    font-size: .7rem;
-  }
-  .hero-image, .hero-image img {
-    height: 270px;
-    min-height: 270px;
-  }
-  .audience-grid {
-    grid-template-columns: 1fr;
-  }
-  .clients-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .client-logo {
-    min-height: 100px;
-  }
-  .footer-main {
-    grid-template-columns: 1fr;
-  }
-  .footer-brand {
-    grid-column: auto;
-  }
-  .footer-signature {
-    font-size: .78rem;
-  }
-  .whatsApp-float {
-    min-width: 52px;
-    width: 52px;
-    height: 52px;
-    padding: 0;
-    border-radius: 50%;
-    font-size: 0;
-  }
-  .whatsApp-float::before {
-    content: "↗";
-    font-size: 1.25rem;
-  }
-}
-@media (prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *, *::before, *::after {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
 
-/* ASSINATURA DO RODAPÉ - compatibilidade com o HTML atual */
-.footer-singnature {
-  padding: 25px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  border-top: 1px solid rgba(255,255,255,.1);
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  text-align: center;
-  color: #A9BACA;
-  font-size: .9rem;
-}
 
-.footer-singnature strong {
-  color: var(--branco);
-}
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
 
-.footer-singnature span:first-of-type {
-  color: var(--laranja);
-}
-
-/* AJUSTE DA ASSINATURA NO CELULAR */
-@media (max-width:800px) {
-  .completed-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .completed-card img {
-    height: 280px;
-  }
-
-  .footer-singnature {
-    flex-wrap: wrap;
-    padding: 22px 20px;
-  }
-}
-
-@media (max-width:480px) {
-  .completed-card img {
-    height: 240px;
-  }
-}
-
-/* ==================================================
-   ORGANIZAÇÃO DOS CARDS - NOSSO TRABALHO
-   ================================================== */
-
-.completed-grid {
-  align-items: stretch;
-}
-
-.completed-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.completed-card img {
-  flex-shrink: 0;
-  height: 210px;
-  object-fit: cover;
-}
-
-.completed-card > div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 18px 20px 22px;
-}
-
-.completed-card span {
-  margin-bottom: 7px;
-  font-size: .68rem;
-  line-height: 1.3;
-}
-
-.completed-card h3 {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  line-height: 1.35;
-}
-
-/* Descrição dos serviços */
-.completed-card p {
-  margin-top: 2px;
-  color: var(--cinza-500);
-  font-size: .82rem;
-  line-height: 1.55;
-}
-
-/* Tópicos dentro dos cards */
-.completed-card ul {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 4px;
-  padding: 0;
-}
-
-.completed-card ul li {
-  position: relative;
-  padding-left: 15px;
-  color: var(--cinza-700);
-  font-size: .78rem;
-  line-height: 1.45;
-}
-
-.completed-card ul li::before {
-  content: "";
-  position: absolute;
-  top: .65em;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--azul-logo);
-}
-
-/* Quando a descrição vier com tópicos separados por linhas */
-.completed-card .topicos {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 4px;
-}
-
-.completed-card .topicos span {
-  position: relative;
-  margin: 0;
-  padding-left: 15px;
-  color: var(--cinza-700);
-  font-size: .78rem;
-  font-weight: 400;
-  line-height: 1.45;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-.completed-card .topicos span::before {
-  content: "";
-  position: absolute;
-  top: .65em;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--azul-logo);
-}
-
-/* Mantém os cards alinhados mesmo com descrições diferentes */
-.completed-card > div > p:last-child,
-.completed-card > div > ul:last-child,
-.completed-card > div > .topicos:last-child {
-  margin-bottom: 0;
-}
-
-/* Tablet */
-@media (max-width: 1100px) {
-  .completed-card img {
-    height: 220px;
-  }
-}
-
-/* Celular */
-@media (max-width: 800px) {
-  .completed-card img {
-    height: 240px;
-  }
-
-  .completed-card > div {
-    padding: 18px 20px 22px;
-  }
-}
-
-/* Celular pequeno */
 @media (max-width: 480px) {
-  .completed-card img {
-    height: 220px;
-  }
 
-  .completed-card h3 {
-    font-size: .98rem;
-  }
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
-  .completed-card p,
-  .completed-card ul li,
-  .completed-card .topicos span {
-    font-size: .78rem;
-  }
+    /* Cabeçalho */
+
+    header .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+
+    /* Banner */
+
+    .banner {
+        min-height: 600px;
+    }
+
+    .banner-conteudo {
+        padding: 60px 16px 70px;
+    }
+
+    .banner-marca {
+        font-size: 12px;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 36px;
+        line-height: 1.05;
+    }
+
+    .banner-conteudo p {
+        font-size: 15px;
+    }
+
+
+    /* Botões */
+
+    .botao-principal,
+    .botao-whatsapp,
+    .botao-secundario {
+        min-height: 48px;
+        font-size: 13px;
+    }
+
+
+    /* Cards */
+
+    .clientes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pilar-imagem {
+        height: 200px;
+    }
 }
