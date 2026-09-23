@@ -499,7 +499,7 @@ ul {
 }
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 18px;
 }
 .process-step {
@@ -576,7 +576,7 @@ ul {
 .completed-card span {
   display: inline-block;
   margin-bottom: 8px;
-  color: var(--azul-logo);
+  color: var(--azul);
   font-size: .76rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -584,7 +584,7 @@ ul {
 }
 
 .completed-card h3 {
-  color: var(--azul-escuro);
+  color: var(--azul);
   font-size: 1.08rem;
   line-height: 1.35;
 }
