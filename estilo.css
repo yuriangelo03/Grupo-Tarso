@@ -192,7 +192,7 @@ ul {
   position: relative;
   padding: 85px 0 80px;
   color: var(--branco);
-  background: radial-gradient(circle at 85% 20%, rgba(22,133,229,.28), transparent 30%), linear-gradient(135deg,var(--azul-escuro),#0D2948);
+  background: radial-gradient(circle at 85% 20%, rgba(22,133,229,.28), transparent 30%), linear-gradient(135deg,var(--azul),#0D2948);
   overflow: hidden;
 }
 .services-hero::after {
@@ -445,7 +445,7 @@ ul {
 .who-card {
   padding: 42px;
   border-radius: 24px;
-  background: var(--azul-escuro);
+  background: var(--azul);
   color: var(--branco);
   box-shadow: var(--sombra);
 }
@@ -618,47 +618,168 @@ ul {
   width: auto;
   object-fit: contain;
 }
-/* CTA */
+/* =========================================================
+   CTA — ESTILO NOTIFICAÇÃO
+   ========================================================= */
+
 .cta {
-  position: relative;
-  padding: 70px 0;
-  overflow: hidden;
-  background: radial-gradient(circle at 80% 50%,rgba(22,133,229,.3),transparent 35%),var(--azul-escuro);
-  color: var(--branco);
+    padding: 25px 0;
+
+    background: var(--branco);
+
+    color: var(--azul-escuro);
 }
-.cta::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 35%;
-  height: 4px;
-  background: var(--laranja);
+
+.cta::before,
+.cta::after {
+    display: none;
 }
-.cta-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+
+.cta .container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 20px 28px;
+
+    background: #1685E5;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(10, 22, 40, 0.12);
+
+    overflow: hidden;
 }
-.cta .eyebrow {
-  color: #9ED1FF;
+
+
+/* detalhe lateral da notificação */
+
+.cta .container::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: var(--laranja);
 }
-.cta h2 {
-  max-width: 680px;
-  margin-bottom: 10px;
-  color: var(--branco);
-  font-size: clamp(1.9rem,3.5vw,3rem);
-  line-height: 1.12;
+
+
+/* conteúdo */
+
+.cta-conteudo {
+    max-width: 700px;
 }
-.cta p {
-  color: #B9CCDE;
+
+.cta .titulo-secao {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--laranja);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
 }
-.cta-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  flex-shrink: 0;
+
+.cta-conteudo h2 {
+    margin: 0 0 3px;
+
+    color: var(--branco);
+
+    font-size: 22px;
+
+    line-height: 1.2;
+}
+
+.cta-conteudo p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.cta-botoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0;
+
+    flex-shrink: 0;
+}
+
+.cta-botoes .botao-whatsapp,
+.cta-botoes .botao-secundario {
+    min-height: 38px;
+
+    padding: 8px 15px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .cta {
+        padding: 18px 0;
+    }
+
+    .cta .container {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+    .cta-conteudo h2 {
+        font-size: 20px;
+    }
+
+    .cta-conteudo p {
+        font-size: 12px;
+    }
+
+    .cta-botoes {
+        width: 100%;
+    }
+
+    .cta-botoes .botao-whatsapp,
+    .cta-botoes .botao-secundario {
+        flex: 1;
+
+        justify-content: center;
+    }
 }
 /* FAQ */
 .faq {
@@ -711,7 +832,7 @@ ul {
 }
 /* FOOTER */
 .footer {
-  background: #07111F;
+  background: var(--azul);
   color: var(--branco);
 }
 .footer-main {
