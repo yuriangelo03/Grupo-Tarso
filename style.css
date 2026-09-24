@@ -1343,446 +1343,587 @@ footer {
     color: var(--laranja);
 }
 /* =========================================================
-   RESPONSIVO
-================================ */
-@media (max-width: 768px) {
-    .rodape {
-        padding-top: 30px;
+   RESPONSIVO - ATUALIZAÇÃO DA PÁGINA PRINCIPAL
+   ========================================================= */
+
+/* BOTÃO MENU MOBILE */
+.menu-mobile {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.menu-mobile span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--azul-escuro);
+    border-radius: 2px;
+    transition: var(--transicao);
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+    header .container {
+        gap: 20px;
     }
 
-    .rodape-container {
-        padding: 0 20px;
+    nav ul {
+        gap: 18px;
     }
 
-    .rodape-social {
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .botao-header {
+        padding: 12px 16px;
+        font-size: 11px;
+    }
+
+    .banner-conteudo {
+        left: 4%;
+        width: 560px;
+        max-width: 560px;
+    }
+
+    .pilares-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1.3fr 1fr 1fr;
+        gap: 35px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 800px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
         padding-left: 18px;
+        padding-right: 18px;
     }
 
-    .assinatura {
-        flex-wrap: wrap;
+    /* HEADER */
+    header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+
+    header .container {
+        min-height: 68px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        gap: 10px;
+    }
+
+    /* LOGO */
+    .logo {
+        width: auto;
+        max-width: calc(100% - 55px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-shrink: 1;
+    }
+
+    .logo img {
+        width: 135px;
+        max-width: 100%;
+        max-height: 42px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* MENU DESKTOP */
+    .menu-principal {
+        display: none;
+    }
+
+    .botao-header {
+        display: none;
+    }
+
+    /* HAMBÚRGUER */
+    .menu-mobile {
+        display: flex;
+    }
+
+    /* MENU ABERTO */
+    header.menu-aberto .menu-principal {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: block;
+        padding: 12px 18px 18px;
+        background: var(--branco);
+        border-top: 1px solid var(--borda);
+        box-shadow: 0 10px 25px rgba(10, 22, 40, 0.10);
+    }
+
+    header.menu-aberto .menu-principal ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    header.menu-aberto .menu-principal li {
+        width: 100%;
+    }
+
+    header.menu-aberto .menu-principal li a {
+        width: 100%;
+        padding: 13px 5px;
+        font-size: 0.95rem;
+        border-bottom: 1px solid var(--borda);
+    }
+
+    header.menu-aberto .menu-principal li:last-child a {
+        border-bottom: none;
+    }
+
+    header.menu-aberto .menu-principal li a::after {
+        display: none;
+    }
+
+    /* ANIMAÇÃO DO HAMBÚRGUER */
+    header.menu-aberto .menu-mobile span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    header.menu-aberto .menu-mobile span:nth-child(2) {
+        opacity: 0;
+    }
+
+    header.menu-aberto .menu-mobile span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* BANNER */
+    .banner {
+        min-height: 620px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-position: center;
+    }
+
+    .banner-conteudo {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .banner-marca {
+        margin-bottom: 14px;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .banner-conteudo h1 {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 18px;
+        font-size: clamp(34px, 9vw, 48px);
+        line-height: 1.08;
+    }
+
+    .banner-conteudo p {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* BOTÕES */
+    .banner-botoes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .banner-botoes a {
+        width: 100%;
+        min-height: 50px;
+        padding: 14px 18px;
+        text-align: center;
+    }
+
+    /* APRESENTAÇÃO */
+    .apresentacao {
+        padding: 65px 0;
+    }
+
+    .apresentacao-conteudo {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .apresentacao-conteudo h2 {
+        margin-bottom: 18px;
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .apresentacao-conteudo p {
+        max-width: 100%;
+        margin-bottom: 12px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* TÍTULOS */
+    .titulo-central {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 38px;
+    }
+
+    .titulo-central h2 {
+        font-size: 30px;
+    }
+
+    .titulo-central p {
+        font-size: 15px;
+    }
+
+    /* PILARES */
+    .pilares {
+        padding: 65px 0;
+    }
+
+    .pilares .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .pilares-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pilar-card {
+        width: 100%;
+    }
+
+    .pilar-imagem {
+        height: 220px;
+    }
+
+    .pilar-conteudo {
+        padding: 22px;
+    }
+
+    .pilar-conteudo h3 {
+        font-size: 22px;
+    }
+
+    .pilar-conteudo p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    /* CLIENTES */
+    .clientes {
+        padding: 65px 0;
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .cliente-logo {
+        min-height: 100px;
+        padding: 15px;
+    }
+
+    .cliente-logo img {
+        max-width: 120px;
+        max-height: 48px;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 65px 0;
+    }
+
+    .cta-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-conteudo h2 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+
+    .cta-conteudo p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .cta-botoes {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .cta-botoes a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* FOOTER */
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .footer-marca p {
+        max-width: 100%;
+        margin-top: 15px;
         font-size: 14px;
     }
 
-    .rodape-final {
-        padding: 18px 20px;
+    .footer-coluna h3 {
+        margin-bottom: 14px;
+    }
+
+    .footer-coluna ul {
+        gap: 8px;
+    }
+
+    .footer-coluna li,
+    .footer-coluna a {
+        font-size: 14px;
+    }
+
+    /* RODAPÉ INFERIOR */
+    .footer-bottom .container {
+        min-height: auto;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    /* ASSINATURA */
+    .footer-singnature {
+        flex-wrap: wrap;
+        padding: 20px 18px;
+        gap: 6px;
+        font-size: 0.82rem;
+        line-height: 1.5;
+    }
+
+    /* PÁGINA DE SERVIÇOS */
+    .servicos-banner {
+        min-height: 520px;
+        background-position: center;
+    }
+
+    .servicos-banner-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .servicos-banner-conteudo h1 {
+        font-size: clamp(34px, 9vw, 48px);
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servicos-diferenciais-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 }
-/* TABLET */
-@media (max-width:1100px) {
-  .nav-menu {
-    gap: 18px;
-  }
-  .header-content {
-    gap: 18px;
-  }
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-  .hero-content {
-    max-width: 850px;
-  }
-  .hero-image {
-    max-width: 750px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .services-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .audience-grid {
-    grid-template-columns: repeat(3,1fr);
-  }
-  .process-grid {
-    grid-template-columns: repeat(3,1fr);
-  }
-  .completed-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .clients-grid {
-    grid-template-columns: repeat(3,1fr);
-  }
-  .cta-content {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-/* CELULAR */
-@media (max-width:800px) {
-  .container {
-    width: min(100% - 28px,var(--largura));
-  }
-  .section {
-    padding: 65px 0;
-  }
-  .header-content {
-    min-height: 70px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 12px 0;
-  }
-  .logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .nav-menu {
-    width: 100%;
-    gap: 16px;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 4px 2px 8px;
-    scrollbar-width: none;
-  }
-  .nav-menu::-webkit-scrollbar {
-    display: none;
-  }
-  .nav-menu a {
-    white-space: nowrap;
-    font-size: .8rem;
-  }
-  .btn-header {
-    display: none;
-  }
-  .services-hero {
-    padding: 60px 0 55px;
-  }
-  .hero-content h1 {
-    font-size: clamp(2.25rem,11vw,3.4rem);
-  }
-  .hero-content > p {
-    font-size: .98rem;
-  }
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .hero-buttons .btn {
-    width: 100%;
-  }
-  .hero-stats {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .hero-image, .hero-image img {
-    min-height: 320px;
-    height: 320px;
-  }
-  .benefits-grid, .who-grid {
-    grid-template-columns: 1fr;
-  }
-  .benefits-grid {
-    gap: 16px;
-  }
-  .who-grid {
-    gap: 35px;
-  }
-  .who-card {
-    padding: 30px 24px;
-  }
-  .who-card ul {
-    grid-template-columns: 1fr;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .service-card > p {
-    min-height: auto;
-  }
-  .audience-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-  .completed-grid {
-    grid-template-columns: 1fr;
-  }
-  .completed-card, .completed-card img {
-    min-height: 320px;
-    height: 320px;
-  }
-  .clients-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .cta {
-    padding: 55px 0;
-  }
-  .cta-buttons {
-    width: 100%;
-    flex-direction: column;
-  }
-  .cta-buttons .btn {
-    width: 100%;
-  }
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-  .footer-signature {
-    flex-wrap: wrap;
-  }
-  .whatsApp-float {
-    right: 16px;
-    bottom: 16px;
-  }
-}
+
 /* CELULAR PEQUENO */
-@media (max-width:480px) {
-  .section-heading {
-    margin-bottom: 38px;
-  }
-  .section-heading h2 {
-    font-size: 1.85rem;
-  }
-  .hero-stats {
-    gap: 8px;
-  }
-  .stat {
-    padding: 13px 9px;
-  }
-  .stat strong {
-    font-size: 1rem;
-  }
-  .stat span {
-    font-size: .7rem;
-  }
-  .hero-image, .hero-image img {
-    height: 270px;
-    min-height: 270px;
-  }
-  .audience-grid {
-    grid-template-columns: 1fr;
-  }
-  .clients-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .client-logo {
-    min-height: 100px;
-  }
-  .footer-main {
-    grid-template-columns: 1fr;
-  }
-  .footer-brand {
-    grid-column: auto;
-  }
-  .footer-signature {
-    font-size: .78rem;
-  }
-  .whatsApp-float {
-    min-width: 52px;
-    width: 52px;
-    height: 52px;
-    padding: 0;
-    border-radius: 50%;
-    font-size: 0;
-  }
-  .whatsApp-float::before {
-    content: "↗";
-    font-size: 1.25rem;
-  }
-}
-@media (prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *, *::before, *::after {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
-
-/* ASSINATURA DO RODAPÉ - compatibilidade com o HTML atual */
-.footer-singnature {
-  padding: 25px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  border-top: 1px solid rgba(255,255,255,.1);
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  text-align: center;
-  color: #A9BACA;
-  font-size: .9rem;
-}
-
-.footer-singnature strong {
-  color: var(--branco);
-}
-
-.footer-singnature span:first-of-type {
-  color: var(--laranja);
-}
-
-/* AJUSTE DA ASSINATURA NO CELULAR */
-@media (max-width:800px) {
-  .completed-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .completed-card img {
-    height: 280px;
-  }
-
-  .footer-singnature {
-    flex-wrap: wrap;
-    padding: 22px 20px;
-  }
-}
-
-@media (max-width:480px) {
-  .completed-card img {
-    height: 240px;
-  }
-}
-
-/* ==================================================
-   ORGANIZAÇÃO DOS CARDS - NOSSO TRABALHO
-   ================================================== */
-
-.completed-grid {
-  align-items: stretch;
-}
-
-.completed-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.completed-card img {
-  flex-shrink: 0;
-  height: 210px;
-  object-fit: cover;
-}
-
-.completed-card > div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 18px 20px 22px;
-}
-
-.completed-card span {
-  margin-bottom: 7px;
-  font-size: .68rem;
-  line-height: 1.3;
-}
-
-.completed-card h3 {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  line-height: 1.35;
-}
-
-/* Descrição dos serviços */
-.completed-card p {
-  margin-top: 2px;
-  color: var(--cinza-500);
-  font-size: .82rem;
-  line-height: 1.55;
-}
-
-/* Tópicos dentro dos cards */
-.completed-card ul {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 4px;
-  padding: 0;
-}
-
-.completed-card ul li {
-  position: relative;
-  padding-left: 15px;
-  color: var(--cinza-700);
-  font-size: .78rem;
-  line-height: 1.45;
-}
-
-.completed-card ul li::before {
-  content: "";
-  position: absolute;
-  top: .65em;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--azul-logo);
-}
-
-/* Quando a descrição vier com tópicos separados por linhas */
-.completed-card .topicos {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 4px;
-}
-
-.completed-card .topicos span {
-  position: relative;
-  margin: 0;
-  padding-left: 15px;
-  color: var(--cinza-700);
-  font-size: .78rem;
-  font-weight: 400;
-  line-height: 1.45;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-.completed-card .topicos span::before {
-  content: "";
-  position: absolute;
-  top: .65em;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--azul-logo);
-}
-
-/* Mantém os cards alinhados mesmo com descrições diferentes */
-.completed-card > div > p:last-child,
-.completed-card > div > ul:last-child,
-.completed-card > div > .topicos:last-child {
-  margin-bottom: 0;
-}
-
-/* Tablet */
-@media (max-width: 1100px) {
-  .completed-card img {
-    height: 220px;
-  }
-}
-
-/* Celular */
-@media (max-width: 800px) {
-  .completed-card img {
-    height: 240px;
-  }
-
-  .completed-card > div {
-    padding: 18px 20px 22px;
-  }
-}
-
-/* Celular pequeno */
 @media (max-width: 480px) {
-  .completed-card img {
-    height: 220px;
-  }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-  .completed-card h3 {
-    font-size: .98rem;
-  }
+    .logo img {
+        width: 125px;
+        max-height: 38px;
+    }
 
-  .completed-card p,
-  .completed-card ul li,
-  .completed-card .topicos span {
-    font-size: .78rem;
-  }
+    .menu-mobile {
+        width: 42px;
+        height: 42px;
+    }
+
+    .banner {
+        min-height: 580px;
+    }
+
+    .banner-conteudo {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .banner-marca {
+        font-size: 11px;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 34px;
+        line-height: 1.08;
+    }
+
+    .banner-conteudo p {
+        font-size: 15px;
+    }
+
+    .apresentacao {
+        padding: 55px 0;
+    }
+
+    .apresentacao-conteudo h2 {
+        font-size: 24px;
+    }
+
+    .pilares {
+        padding: 55px 0;
+    }
+
+    .pilar-imagem {
+        height: 200px;
+    }
+
+    .pilar-conteudo {
+        padding: 20px;
+    }
+
+    .pilar-conteudo h3 {
+        font-size: 21px;
+    }
+
+    .clientes {
+        padding: 55px 0;
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .cliente-logo {
+        min-height: 90px;
+        padding: 12px;
+    }
+
+    .cliente-logo img {
+        max-width: 105px;
+        max-height: 42px;
+    }
+
+    .cta {
+        padding: 55px 0;
+    }
+
+    .cta-conteudo h2 {
+        font-size: 29px;
+    }
+
+    .footer-conteudo {
+        gap: 28px;
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+
+    .footer-singnature {
+        padding: 18px 15px;
+        font-size: 0.78rem;
+    }
+
+    .servicos-banner {
+        min-height: 480px;
+    }
+
+    .servicos-banner-conteudo h1 {
+        font-size: 34px;
+    }
+
+    .servico-card {
+        padding: 25px 20px;
+    }
+
+    .servico-card h3 {
+        font-size: 21px;
+    }
+}
+
+/* REDUÇÃO DE MOVIMENTO */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
