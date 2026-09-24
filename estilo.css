@@ -85,7 +85,7 @@ ul {
   gap: 28px;
 }
 .nav-menu a {
-  position: center;
+  position: relative;
   color: var(--cinza-700);
   font-size: .9rem;
   font-weight: 600;
