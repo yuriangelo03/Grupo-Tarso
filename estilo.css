@@ -83,14 +83,20 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 28px;
+  margin: 0;
+  padding: 0;
 }
+
 .nav-menu a {
   position: relative;
+  display: block;
   color: var(--cinza-700);
   font-size: .9rem;
   font-weight: 600;
   transition: color var(--transicao);
+  white-space: nowrap;
 }
+
 .nav-menu a::after {
   content: "";
   position: absolute;
@@ -101,11 +107,25 @@ ul {
   background: var(--azul-logo);
   transition: width var(--transicao);
 }
-.nav-menu a:hover, .nav-menu a.active {
+
+.nav-menu a:hover,
+.nav-menu a.active {
   color: var(--azul-logo);
 }
-.nav-menu a:hover::after, .nav-menu a.active::after {
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
   width: 100%;
+}
+.menu-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.menu-principal .nav-menu {
+  justify-content: center;
 }
 /* BUTTONS */
 .btn {
