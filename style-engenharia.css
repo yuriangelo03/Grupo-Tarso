@@ -232,7 +232,7 @@ button {
       #091a30d9 48%,
       #0a16284d 100%
     ),
-    url('./img-case/banner.png') center/cover no-repeat,
+    url('banner.png') center/cover no-repeat,
     var(--navy);
 }
 
@@ -532,19 +532,19 @@ button {
 /* FOTOS INDIVIDUAIS */
 
 .op-card-expansion {
-  background-image: url('./img-case/case-02.jpeg');
+  background-image: url('case-02.jpeg');
   background-position: center;
   background-size: cover;
 }
 
 .op-card-modernizacao {
-  background-image: url('./img-case/case-04.jpeg');
+  background-image: url('case-04.jpeg');
   background-position: center;
   background-size: cover;
 }
 
 .op-card-projetos {
-  background-image: url('./img-case/execução.jpeg');
+  background-image: url('execução.jpeg');
   background-position: center;
   background-size: cover;
 }
