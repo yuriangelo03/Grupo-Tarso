@@ -230,7 +230,7 @@ button {
       #091a30d9 48%,
       #0a16284d 100%
     ),
-    url('./img-case/banner.png') center/cover no-repeat,
+    url('banner.png') center/cover no-repeat,
     var(--navy);
 }
 
