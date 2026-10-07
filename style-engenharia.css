@@ -1,5 +1,3 @@
-
-
 /* =========================================================
    GRUPO TARSO | PÁGINA DE CONSTRUÇÃO
    ========================================================= */
@@ -232,7 +230,7 @@ button {
       #091a30d9 48%,
       #0a16284d 100%
     ),
-    url('banner.png') center/cover no-repeat,
+    url('./img-case/banner.png') center/cover no-repeat,
     var(--navy);
 }
 
@@ -258,7 +256,7 @@ button {
 }
 
 .hero .eyebrow {
-  color: #9bd1ff;
+  color: var(--azul);
 }
 
 .hero h1 {
@@ -270,7 +268,7 @@ button {
 
 .hero h1 em {
   display: block;
-  color: #91caff;
+  color: var(--orange);
   font-style: normal;
 }
 
@@ -406,7 +404,7 @@ button {
   line-height: 1.12;
   letter-spacing: -.045em;
 
-  color: var(--navy);
+  color: var(--azul);
 }
 
 .intro-layout h2 span,
@@ -415,7 +413,7 @@ button {
 .investment h2 span,
 .commitment h2 span,
 .faq h2 span {
-  color: var(--blue);
+  color: var(--orange);
 }
 
 .intro-layout > div > p {
@@ -532,19 +530,19 @@ button {
 /* FOTOS INDIVIDUAIS */
 
 .op-card-expansion {
-  background-image: url('case-02.jpeg');
+  background-image: url('./img-case/case-02.jpeg');
   background-position: center;
   background-size: cover;
 }
 
 .op-card-modernizacao {
-  background-image: url('case-04.jpeg');
+  background-image: url('./img-case/case-04.jpeg');
   background-position: center;
   background-size: cover;
 }
 
 .op-card-projetos {
-  background-image: url('execução.jpeg');
+  background-image: url('./img-case/execução.jpeg');
   background-position: center;
   background-size: cover;
 }
@@ -588,7 +586,7 @@ button {
   padding: 13px 18px;
 
   color: #fff;
-  background: var(--navy);
+  background: var(--azul);
 
   font-size: .75rem;
   font-weight: 700;
@@ -660,15 +658,15 @@ button {
 }
 
 .section-top.light h2 span {
-  color: var(--navy);
+  color: var(--orange);
 }
 
 .section-top.light > p:not(.eyebrow) {
-  color: var(--navy);
+  color: var(--orange);
 }
 
 .section-top.light .eyebrow {
-  color: var(--orange);
+  color: var(--navy);
 }
 
 
@@ -693,7 +691,7 @@ button {
 }
 
 .process-grid article:hover {
-  background: var(--navy);
+  background: #ffffff45
 }
 
 .process-grid article > b {
@@ -707,7 +705,7 @@ button {
 .process-grid h3 {
   margin-top: 30px;
 
-  color: #fff;
+  color: var(--navy);
   font-size: 1.1rem;
 }
 
@@ -818,7 +816,7 @@ button {
 
   overflow: hidden;
 
-  background: var(--navy);
+  background: var(--azul);
 
   box-shadow: 0 24px 55px #0a16281c;
 }
@@ -844,7 +842,7 @@ button {
 
   padding: clamp(28px, 5vw, 60px);
 
-  color: #fff;
+  color: var(--orange);
 }
 
 .case-count {
@@ -991,7 +989,7 @@ button {
    ========================================================= */
 
 .faq {
-  background: var(--soft);
+  background: var(--azul);
 }
 
 .faq-layout {
@@ -1002,15 +1000,15 @@ button {
 
 .faq-layout > div:first-child > p:not(.eyebrow) {
   margin-top: 17px;
-  color: var(--muted);
+  color: var(--navy);
 }
 
 .faq-list {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--orange);
 }
 
 .faq-list details {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--orange);
 }
 
 .faq-list summary {
@@ -1021,7 +1019,7 @@ button {
   cursor: pointer;
   list-style: none;
 
-  color: var(--navy);
+  color: var(--orange);
   font-weight: 700;
   font-size: .92rem;
 }
@@ -1037,7 +1035,7 @@ button {
   right: 4px;
   top: 15px;
 
-  color: var(--blue);
+  color: var(--orange);
   font-size: 1.4rem;
 }
 
@@ -1048,7 +1046,7 @@ button {
 .faq-list details p {
   padding: 0 30px 20px 0;
 
-  color: var(--muted);
+  color: var(--navy);
   font-size: .88rem;
 }
 
@@ -1069,7 +1067,7 @@ button {
       #1685e544,
       transparent 34%
     ),
-    var(--navy);
+    var(--azul);
 }
 
 .final-inner {
@@ -1077,7 +1075,7 @@ button {
 }
 
 .final-cta .eyebrow {
-  color: #91caff;
+  color: var(--orange);
 }
 
 .final-cta h2 {
@@ -1087,7 +1085,7 @@ button {
 }
 
 .final-cta h2 span {
-  color: #91caff;
+  color: var(--orange);
 }
 
 .final-cta p:not(.eyebrow) {
@@ -1105,7 +1103,7 @@ button {
 .footer {
   padding: 55px 0 0;
 
-  background: #07111f;
+  background: var(--azul);
   color: #b7c7d8;
 }
 
@@ -1432,13 +1430,65 @@ button {
   }
 
 }
+/* =========================================================
+   CLIENTES E PARCERIAS
+   ========================================================= */
+/* CLIENTES */
 
+.clientes {
+    padding: 100px 0;
+    background: var(--branco);
+}
 
+.clientes-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+}
+
+.cliente-logo {
+    min-height: 120px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+
+    background: var(--branco);
+
+    transition:
+        transform var(--transicao),
+        border-color var(--transicao),
+        box-shadow var(--transicao);
+}
+
+.cliente-logo:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(22, 133, 229, 0.4);
+
+    box-shadow: var(--sombra);
+}
+
+.cliente-logo img {
+    max-width: 130px;
+    max-height: 60px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
 /* =========================================================
    17. CELULARES
    ========================================================= */
 
 @media (max-width: 560px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
 
   .container {
     width: calc(100% - 34px);
