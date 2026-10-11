@@ -1111,11 +1111,12 @@ button {
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 35px;
+   display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
 
   padding-bottom: 35px;
+
 }
 
 
