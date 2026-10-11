@@ -859,9 +859,11 @@ ul {
 .footer-main {
   padding: 65px 0 45px;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
 }
+
 .footer-brand img {
   width: auto;
   max-width: 145px;
