@@ -73,9 +73,8 @@ ul {
   flex-shrink: 0;
 }
 .logo img {
-  width: auto;
-  max-width: 145px;
-  max-height: 42px;
+  width: 155px;
+  max-height: 55px;
   object-fit: contain;
 }
 .nav-menu {
