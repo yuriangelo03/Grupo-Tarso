@@ -407,7 +407,7 @@ button {
   line-height: 1.12;
   letter-spacing: -.045em;
 
-  color: var(--azul);
+  color: var(--orange);
 }
 
 .intro-layout h2 span,
@@ -615,7 +615,7 @@ button {
   position: relative;
   padding-left: 27px;
 
-  color: var(--navy2);
+  color: var(--orange);
   font-size: .9rem;
   font-weight: 700;
 }
@@ -626,7 +626,7 @@ button {
   position: absolute;
   left: 0;
 
-  color: var(--orange2);
+  color: var(--azul);
   font-weight: 900;
 }
 
